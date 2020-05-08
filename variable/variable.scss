@@ -1,0 +1,75 @@
+$direction--hjx: (
+  l: left,
+  t: top,
+  b: bottom,
+  r: right,
+);
+
+$spacing-type--hjx: (
+  m: margin,
+  p: padding,
+);
+
+$flex-jc--hjx: (
+  start: start,
+  center: center,
+  end: end,
+  between: space-between,
+  around: space-around,
+);
+
+$flex-ai--hjx: (
+  start: start,
+  center: center,
+  end: end,
+);
+
+$flex--ac--hjx: $flex-jc--hjx;
+
+$flex-wrap--hjx: (
+  nowrap: nowrap,
+  wrap: wrap,
+  reverse: wrap-reverse,
+);
+
+$flex-scale-type--hjx: (grow, shrink);
+
+$position-type--hjx: (relative, absolute, fixed);
+
+$border-type--hjx: (
+  dotted,
+  dashed,
+  solid,
+  double,
+  groove,
+  ridge,
+  inset,
+  outset
+);
+
+$cursor-type--hjx: (
+  pointer,
+  text,
+  grab,
+  grabbing,
+  zoom-in,
+  zoom-out,
+  not-allowed
+);
+
+$display-type--hjx: (flex, inline-block, block, inline, none);
+
+$overflow-type--hjx: (visible, auto, hidden, scroll, overlay);
+
+$bgimg-position-type--hjx: (top, left, right, bottom, center);
+
+$bgimg-size-type--hjx: (contain, cover);
+
+$bgimg-repeat-type--hjx: (repeat, repeat-x, no-repeat, repeat-y);
+
+$vertical-align-type--hjx: (baseline, top, middle, bottom);
+
+$element-size-type--hjx: (
+  w: width,
+  h: height,
+);

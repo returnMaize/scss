@@ -1,0 +1,13 @@
+.no-select {
+  user-select: none;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hover:hover {
+  opacity: 0.8;
+}

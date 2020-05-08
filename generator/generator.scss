@@ -1,0 +1,208 @@
+@import '../size/size.scss';
+@import '../variable/variable.scss';
+@import '../base/base.scss';
+@import '../color/color.scss';
+
+// padding margin
+@each $typeKey, $typeValue in $spacing-type--hjx {
+  @each $size in $spacing-size--hjx {
+    .#{ $typeKey }-#{ $size } {
+      #{ $typeValue }: $size * $spacing-base--hjx;
+    }
+
+    .#{ $typeKey }x-#{ $size } {
+      #{ $typeValue }-left: $size * $spacing-base--hjx;
+      #{ $typeValue }-right: $size * $spacing-base--hjx;
+    }
+
+    .#{ $typeKey }y-#{ $size } {
+      #{ $typeValue }-top: $size * $spacing-base--hjx;
+      #{ $typeValue }-bottom: $size * $spacing-base--hjx;
+    }
+  }
+  @each $directionKey, $directionValue in $direction--hjx {
+    @each $size in $spacing-size--hjx {
+      .#{ $typeKey }#{ $directionKey }-#{ $size } {
+        #{ $typeValue }-#{ $directionValue }: $size * $spacing-base--hjx;
+      }
+    }
+  }
+}
+
+// text size weight line-height text-align
+@each $size in $text-size--hjx {
+  .text-#{ $size } {
+    font-size: $size * $text-base--hjx;
+  }
+
+  .line-height-#{ $size } {
+    line-height: $size * $text-base--hjx;
+  }
+}
+
+@each $size in $text-weight-size--hjx {
+  .text-weight-#{ $size } {
+    font-weight: $size;
+  }
+}
+
+@each $value in (left, center, right) {
+  .text-#{ $value } {
+    text-align: $value;
+  }
+}
+
+// flex
+@each $key, $value in $flex-jc--hjx {
+  .jc-#{ $key } {
+    justify-content: $value;
+  }
+
+  .ac-#{ $key } {
+    align-content: $value;
+  }
+}
+
+@each $key, $value in $flex-ai--hjx {
+  .ai-#{ $key } {
+    align-items: $value;
+  }
+}
+
+@each $key, $value in $flex-wrap--hjx {
+  .flex-#{ $key } {
+    flex-wrap: $value;
+  }
+}
+
+@each $type in $flex-scale-type--hjx {
+  @each $size in $decorate-size--hjx {
+    .flex-#{ $type }-#{ $size } {
+      flex-#{ $type }: $size;
+    }
+  }
+}
+
+// position
+@each $type in $position-type--hjx {
+  .pos-#{ $type } {
+    position: $type;
+  }
+}
+
+@each $directionKey, $directionValue in $direction--hjx {
+  @each $size in $spacing-size--hjx {
+    .#{ $directionKey }-#{ $size } {
+      #{ $directionValue }: $size * $spacing-base--hjx;
+    }
+  }
+}
+
+// color bg
+@each $colorKey, $colorValue in $text-bg-color--hjx {
+  .text-#{ $colorKey } {
+    color: $colorValue;
+  }
+
+  .bg-#{ $colorKey } {
+    background-color: $colorValue;
+  }
+}
+
+// border color size direction type
+@each $colorKey, $colorValue in $border-color--hjx {
+  @each $size in $decorate-size--hjx {
+    .border-#{ $colorKey }-#{ $size } {
+      border: $size * $decorate-base--hjx solid $colorValue;
+    }
+
+    @each $directionKey, $directionValue in $direction--hjx {
+      .border-#{ $colorKey }-#{ $size }--#{ $directionKey } {
+        border-#{ $directionValue }: $size *
+          $decorate-base--hjx
+          solid
+          $colorValue;
+      }
+
+      @each $type in $border-type--hjx {
+        .border-#{ $colorKey }-#{ $size }--#{ $directionKey }-#{ $type } {
+          border-#{ $directionValue }: $size *
+            $decorate-base--hjx
+            $type
+            $colorValue;
+        }
+      }
+    }
+  }
+}
+
+// border radius
+@each $size in $border-radius-size--hjx {
+  .border-radius-#{ $size } {
+    border-radius: $size * $border-radius-base--hjx;
+  }
+}
+
+// width height percentage px
+@each $typeKey, $typeValue in $element-size-type--hjx {
+  @each $percentageSizeKey,
+    $percentageSizeValue in $element-percentage-size--hjx
+  {
+    .#{ $typeKey }#{ $percentageSizeKey } {
+      #{ $typeValue }: $percentageSizeValue;
+    }
+  }
+
+  @each $size in $element-size--hjx {
+    .#{ $typeKey }-#{ $size } {
+      #{ $typeValue }: $size * $element-size-base--hjx;
+    }
+  }
+}
+
+// cursor
+@each $type in $cursor-type--hjx {
+  .cursor-#{ $type } {
+    cursor: $type;
+  }
+}
+
+// display
+@each $type in $display-type--hjx {
+  .d-#{ $type } {
+    display: $type;
+  }
+}
+
+// overflow
+@each $type in $overflow-type--hjx {
+  .overflow-#{ $type } {
+    overflow: $type;
+  }
+}
+
+// background-image
+@each $positionType in $bgimg-position-type--hjx {
+  .bgimg-position-#{ $positionType } {
+    background-position: $positionType;
+  }
+}
+
+@each $sizeType in $bgimg-size-type--hjx {
+  .bgimg-size-#{ $sizeType } {
+    background-size: $sizeType;
+  }
+}
+
+@each $repeatType in $bgimg-repeat-type--hjx {
+  .bgimg-#{ $repeatType } {
+    background-repeat: $repeatType;
+  }
+}
+
+// vertical-align
+@each $verticalType in $vertical-align-type--hjx {
+  .vc-#{ $verticalType } {
+    vertical-align: $verticalType;
+  }
+}

@@ -1,0 +1,80 @@
+// padding margin top font-size line-height border flex-grow font-weight
+$common-size--hjx: (
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50
+);
+
+$spacing-size--hjx: $common-size--hjx;
+
+$border-radius-size--hjx: $common-size--hjx;
+
+$text-size--hjx: $common-size--hjx;
+
+$text-weight-size--hjx: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+$decorate-size--hjx: (0, 1, 2, 3, 4, 5);
+
+$element-percentage-size--hjx: (
+  0: 0%,
+  10: 10%,
+  20: 20%,
+  30: 30%,
+  40: 40%,
+  50: 50%,
+  60: 60%,
+  70: 70%,
+  80: 80%,
+  90: 90%,
+  100: 100%,
+);
+
+$element-size--hjx: $text-weight-size--hjx;
