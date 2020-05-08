@@ -116,6 +116,12 @@
       border: $size * $decorate-base--hjx solid $colorValue;
     }
 
+    @each $type in $border-type--hjx {
+      .border-#{ $colorKey }-#{ $size }--#{ $type } {
+        border: $size * $decorate-base--hjx $type $colorValue;
+      }
+    }
+
     @each $directionKey, $directionValue in $direction--hjx {
       .border-#{ $colorKey }-#{ $size }--#{ $directionKey } {
         border-#{ $directionValue }: $size *
